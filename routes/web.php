@@ -19,16 +19,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Auth::routes();
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Auth::routes();
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('auth/github', 'Auth\AuthController@redirecToProvider');
+Route::get('auth/github/callback','Auth\AuthController@handleProviderCallback');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
